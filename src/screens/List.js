@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Dimensions, ScrollView } from 'react-native';
+import { Dimensions, ScrollView, Text } from 'react-native';
 import { Input } from '../components/Input';
 import { Section } from '../components/Section';
 
@@ -65,6 +65,7 @@ export const List = () => {
     <ScrollView>
       {orientation === 'portrait' ? (
         <>
+          <Text>Имя задачи</Text>
           <Input
             onSave={onSaveItem}
             onCancelAll={onCancelAll}
@@ -93,6 +94,7 @@ export const List = () => {
               toggleSwitch={() => toggleSwitch(item.name)}
             />
           ))}
+          <Text style={{ marginLeft: '20%' }}>Name task</Text>
           <Input
             onSave={onSaveItem}
             onCancelAll={onCancelAll}
